@@ -1,13 +1,12 @@
 import express from "express";
-import bookingRoutes from "./modules/booking/booking.route.js";
+import bookingRoutes from "./modules/booking/booking.route.js"
 
 const app = express();
 
 app.use(express.json());
 
-// root route
 app.get("/", (req, res) => {
-    res.send("🚀 Seat Booking API is running");
+  res.send("Booking API is running 🚀");
 });
 
 app.use('/api', bookingRoutes);
